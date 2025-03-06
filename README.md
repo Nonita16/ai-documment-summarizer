@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# 🤖 Ai Document summarizer
+A simple web application that leverages AI to help users summarize long documents. Users can input text by pasting it and the application will generate an AI-powered summary along with key points extracted from the text. Perfect for quick text analysis and content summarization.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Setup instructions
 
-In the project directory, you can run:
+To set up it is pretty straigth forward:
 
-### `npm start`
+- Clone this repo
+- Install dependencies
+- Create your [Hugging Face API Token](https://huggingface.co/docs)
 
+## How to run the application
+
+To run the frontend
+```
+cd ai-document-summarizer/frontend
+npm install
+npm start
+```
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:4000](http://localhost:4000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+To run the backend
+```
+cd ai-document-summarizer/backend
+cp enn.example .env // copy your API key in this file
+npm install
+node server.js
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Brief explanation of your technical choices
 
-### `npm run build`
+Frontend
+- React.js, is used because it’s fast, efficient, and flexible for building modern, interactive websites.
+- Tailwindcss, is used to style the website quickly without writing lots of custom CSS, making the process faster and more maintainable.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Backned
+- Node.js, is used for building a fast and scalable backend with JavaScript, streamlining development by using the same language for both frontend and backend.
+- Express, is used to simplify server management, making it easy to handle requests, define routes, and manage middleware efficiently.
+- Hugging Face API because it is free and has good documentation, is used for text summarization because it provides powerful, pre-trained AI models that save us from building our own complex solutions, making it easy to implement advanced NLP tasks
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Any known limitations or future improvements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For the frontend:
+- I did not need any state management other than hooks since the app is pretty small and react composition was enough but for biggers aplications of course that needs to be addressed.
+- when passing down functions as props from parent to child component is always good to use optimization to avoid unnecesary rerenders but in this case it was not critical
+- The desing could be better, for now I just use the components provided by Tailwind
+- It is always nice to handle loading spinners or skeletons when loading data just to give a better user experience but in this case I just used a text
+- when working on real project we need to consider test coverage, good news is that react already have a built in react-testing-library
 
-### `npm run eject`
+For the backend:
+- Is good practice separate the controllers from the services to isolete responsabilities but in this case since the app is smaller I put it together
+- Initially I was sending a prompt to get the summarized points but looks like this free model was not that great so for now I limited the keypoint to split the summarized text, this is not ideal of course but I was limitated by the free model
+- It is also needed to have a testing coverage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
