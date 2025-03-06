@@ -66,5 +66,9 @@ For the backend:
 - Initially I was sending a prompt to get the summarized points but looks like this free model was not that great so for now I limited the keypoint to split the summarized text, this is not ideal of course but I was limitated by the free model
 - It is also needed to have a testing coverage
 
+In general:
+- Authentication and authorization with JWT
+- Add a database to handle users, roles, payments and other future features
+- Internationalization and Accessibility 
 
 
