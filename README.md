@@ -65,6 +65,7 @@ For the backend:
 - Is good practice separate the controllers from the services to isolete responsabilities but in this case since the app is smaller I put it together
 - Initially I was sending a prompt to get the summarized points but looks like this free model was not that great so for now I limited the keypoint to split the summarized text, this is not ideal of course but I was limitated by the free model
 - It is also needed to have a testing coverage
+- Add the upload document, image, perhaps even videos feature to sum up
 
 In general:
 - Authentication and authorization with JWT

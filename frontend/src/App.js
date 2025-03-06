@@ -42,6 +42,7 @@ function App() {
 
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line
   }, [texToSumarize]);
 
   return (

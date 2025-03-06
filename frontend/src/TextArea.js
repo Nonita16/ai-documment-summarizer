@@ -22,7 +22,7 @@ export default function TextArea({ onSubmit }) {
               value={text}
               onChange={(e) => setText(e.target.value)}
               className="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
-              placeholder="Write a comment..."
+              placeholder="Paste your text here..."
               required
             ></textarea>
           </div>
@@ -35,8 +35,9 @@ export default function TextArea({ onSubmit }) {
             </button>
             <div className="flex space-x-1 rtl:space-x-reverse sm:ps-2">
               <button
+                disabled
                 type="button"
-                className="inline-flex justify-center items-center p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                className="inline-flex justify-center items-center p-2 text-gray-500 rounded-sm cursor-pointer dark:text-gray-400 disabled:opacity-50"
               >
                 <svg
                   className="w-4 h-4"
@@ -60,7 +61,8 @@ export default function TextArea({ onSubmit }) {
       </form>
 
       <p className="text-xs text-gray-500 dark:text-gray-400">
-        Remember, this is only an alpha version of your next document summarize pal, there are greate things comming
+        Remember, this is only an alpha version of your next document summarize
+        pal, Upgrade to a paid version to be able to upload documents
       </p>
     </div>
   );
