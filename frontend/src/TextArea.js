@@ -60,14 +60,7 @@ export default function TextArea({ onSubmit }) {
       </form>
 
       <p className="text-xs text-gray-500 dark:text-gray-400">
-        Remember, contributions to this topic should follow our{" "}
-        <a
-          href="#"
-          className="text-blue-600 dark:text-blue-500 hover:underline"
-        >
-          Community Guidelines
-        </a>
-        .
+        Remember, this is only an alpha version of your next document summarize pal, there are greate things comming
       </p>
     </div>
   );
