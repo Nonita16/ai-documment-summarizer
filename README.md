@@ -14,7 +14,7 @@ To set up it is pretty straigth forward:
 
 ## How to run the application
 
-To run the frontend
+**To run the frontend**
 ```
 cd ai-document-summarizer/frontend
 npm install
@@ -26,7 +26,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-To run the backend
+**To run the backend**
 ```
 cd ai-document-summarizer/backend
 cp env.example .env 
@@ -35,19 +35,19 @@ node server.js
 ```
 
 Runs the server in the development mode.\
-Open [http://localhost:4000](http://localhost:4000) to view it in your browser.
+at [http://localhost:4000](http://localhost:4000)
 
-The page will reload when you make changes.\
+The server will reload when you make changes.\
 
-copy your API key in .env file
+**copy your API key in .env file**
 
 ## Brief explanation of your technical choices
 
-Frontend
+**Frontend**
 - React.js, is used because it’s fast, efficient, and flexible for building modern, interactive websites.
 - Tailwindcss, is used to style the website quickly without writing lots of custom CSS, making the process faster and more maintainable.
 
-Backned
+**Backned**
 - Node.js, is used for building a fast and scalable backend with JavaScript, streamlining development by using the same language for both frontend and backend.
 - Express, is used to simplify server management, making it easy to handle requests, define routes, and manage middleware efficiently.
 - Hugging Face API because it is free and has good documentation, is used for text summarization because it provides powerful, pre-trained AI models that save us from building our own complex solutions, making it easy to implement advanced NLP tasks
