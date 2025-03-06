@@ -1,6 +1,8 @@
 # 🤖 Ai Document summarizer
 A simple web application that leverages AI to help users summarize long documents. Users can input text by pasting it and the application will generate an AI-powered summary along with key points extracted from the text. Perfect for quick text analysis and content summarization.
 
+![Screenshot 2025-03-05 at 11 46 48 PM](https://github.com/user-attachments/assets/06aa03fc-b611-42bc-8326-381493cad226)
+
 
 ## Setup instructions
 
@@ -27,10 +29,11 @@ You may also see any lint errors in the console.
 To run the backend
 ```
 cd ai-document-summarizer/backend
-cp enn.example .env // copy your API key in this file
+cp env.example .env 
 npm install
 node server.js
 ```
+copy your API key in .env file
 
 ## Brief explanation of your technical choices
 
