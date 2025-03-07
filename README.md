@@ -50,7 +50,7 @@ The server will reload when you make changes.\
 **Backned**
 - Node.js, is used for building a fast and scalable backend with JavaScript, streamlining development by using the same language for both frontend and backend.
 - Express, is used to simplify server management, making it easy to handle requests, define routes, and manage middleware efficiently.
-- Hugging Face API because it is free and has good documentation, is used for text summarization because it provides powerful, pre-trained AI models that save us from building our own complex solutions, making it easy to implement advanced NLP tasks
+- Hugging Face API using BART model because it is free and it is a text model also has good documentation https://huggingface.co/docs/transformers/main/en/model_doc/bart, is used for text summarization because it provides powerful, pre-trained AI models that save us from building our own complex solutions, making it easy to implement advanced NLP tasks
 
 ## Any known limitations or future improvements
 
